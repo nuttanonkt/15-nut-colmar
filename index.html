@@ -8,32 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="fixed w-full grid grid-cols-2  h-[64px] bg-white">
-        <nav class="flex items-center pl-[24px] ">
-            <img src="/images/ic-logo.svg" alt="logo">
-            <h2 class="font-bold">COLMAR</h2>
-            <h2 class="text-gray-500">ACADEMY</h2>
-        </nav>
-        <nav class="flex justify-end items-center  gap-[16px] pr-[24px]">
-            <p class="campus cursor-pointer text-gray-800">On campus</p>
-            <p class="online cursor-pointer  text-gray-800">Online</p>
-            <p class="companies cursor-pointer  text-gray-800">or companies</p>
-            <p class="signin cursor-pointer  text-gray-800">Sign in</p>
-        </nav>
+    <header>
+        <div class="fixed flex justify-between w-full  md:hidden h-[64px] bg-white px-[24px] pt-[16px] cursor-pointer">
+            <img src="/images/ic-logo.svg" alt="">
+            <img src="/images/ic-on-campus.svg" alt="">
+            <img src="/images/ic-online.svg" alt="">
+            <img src="/images/ic-login.svg" alt="">
+        </div>
+        <div class="fixed w-full hidden md:flex justify-between md:h-[64px] bg-white">  
+            <nav class="flex items-center pl-[24px] ">
+                <img src="/images/ic-logo.svg" alt="logo">
+                <h2 class="font-bold">COLMAR</h2>
+                <h2 class="text-gray-500">ACADEMY</h2>
+            </nav>
+            <nav class="flex justify-end items-center  gap-[16px] pr-[24px]">
+                <p class="cursor-pointer text-gray-800">On campus</p>
+                <p class="cursor-pointer  text-gray-800">Online</p>
+                <p class="cursor-pointer  text-gray-800">or companies</p>
+                <p class="cursor-pointer  text-gray-800">Sign in</p>
+            </nav>
+        </div>
     </header>
     <main class="pt-[64px]">
-        <section class="grid grid-cols-[60%_40%] bg-gray-300 pt-[32px] pb-[32px] pr-[24px] pl-[24px]">
-            <div>
+        <section class="grid md:grid-cols-[60%_40%]   bg-gray-300 md:pt-[32px] pb-[32px] md:pr-[24px] md:pl-[24px]">
                 <img class="w-full max-h-full" src="/images/banner.jpg" alt="banner">
-            </div>
-            <div class="flex flex-col justify-center space-y-[28px] pl-[24px] ">
-                <h2 class="text-4xl font-bold text-gray-600 ">Learn something <br> new everyday</h2>
-                <p class="font-bold text-gray-500">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.</p>
-                <button class="w-[60%] text-white bg-gray-700 pt-[8px] pb-[8px]">Start here</button>
+            <div class="flex flex-col items-center md:items-start justify-center space-y-[28px] pl-[24px]  ">
+                <h2 class="text-4xl font-bold text-gray-600 pt-[32px] ">Learn something <br> new everyday</h2>
+                <p class="font-bold text-gray-500 pt-[32px] pb-[24px] mr-[64px] md:pt-[0px] md:pb-[0px]">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.</p>
+                <button class="w-[300px] text-white bg-gray-700 pt-[8px] pb-[8px] ">Start here</button>
             </div>
         </section>
-        <section class="grid grid-cols-[60%_40%]">
-            <article class="pt-[32px] pl-[24px]">
+
+        <section class="grid md:grid-cols-[60%_40%]">
+            <article class="hidden md:block pt-[32px] pl-[24px]">
                 <img class="" src="/images/information-main.jpg" alt="information-main">
                 <h2 class="pt-[32px] pb-[24px] font-bold text-3xl text-gray-700 ">It doesn't hurt to keep practicing</h2>
                 <p class="pb-[32px] pr-[16px] text-sm text-gray-500 ">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste doloremque minus reiciendis ipsam quod, ullam alias quibusdam. Deleniti magni, mollitia voluptas placeat consequuntur non. Ea voluptate repellat aperiam quo nobis ratione."</p>
@@ -41,96 +48,97 @@
             </article>
 
             <article class="pt-[16px] pl-[24px]">
-                <figure class="grid grid-cols-[35%_65%] h-auto pt-[16px] pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer">
-                    <img src="/images/information-orientation.jpg" alt="orientation">
+                <figure class="md:grid grid-cols-[35%_65%] h-auto pt-[16px] w-full pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer">
+                    <img class="w-full pr-[16px] md:pr-[0px] " src="/images/information-orientation.jpg" alt="orientation">
                 <figcaption class="flex flex-col justify-center gap-[8px] pl-[16px]">
-                    <h3 class="font-bold text-xl  text-gray-700">Orientation date</h3>
+                    <h3 class="pt-[16px] md:pt-[0px] font-bold text-xl  text-gray-700">Orientation date</h3>
                     <p class="text-sm text-gray-500">tue 10/11 & wed 10/12: 8am-3pm</p>
                     <a class="text-sm text-blue-400" href="">Read more</a>
                 </figcaption>
                 </figure>
 
-                <figure class="grid grid-cols-[35%_65%] h-auto pt-[16px] pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer" >
-                    <img src="/images/information-campus.jpg" alt="campus">
+                <figure class="md:grid grid-cols-[35%_65%] h-auto pt-[16px] pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer" >
+                    <img class="w-full pr-[16px] md:pr-[0px] " src="/images/information-campus.jpg" alt="campus">
                 <figcaption class="flex flex-col justify-center gap-[8px] pl-[16px]">
-                    <h3 class="font-bold text-xl  text-gray-700" >Our campus</h3>
+                    <h3 class="pt-[16px] md:pt-[0px] font-bold text-xl  text-gray-700" >Our campus</h3>
                     <p class="text-sm text-gray-500">Find which campus is close by you</p>
                     <a class="text-sm text-blue-400" href="">Read more</a>
                 </figcaption>
                 </figure>
 
-                <figure class="grid grid-cols-[35%_65%] h-auto pt-[16px] pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer">
-                    <img src="/images/information-guest-lecture.jpg" alt="guest">
+                <figure class="md:grid grid-cols-[35%_65%] h-auto pt-[16px] pl-[16px] pb-[16px] hover:bg-gray-200 cursor-pointer">
+                    <img class="w-full pr-[16px] md:pr-[0px]" src="/images/information-guest-lecture.jpg" alt="guest">
                 <figcaption class="flex flex-col justify-center gap-[8px] pl-[16px]">
-                    <h3 class="font-bold text-xl  text-gray-700">Our guest lecture</h3>
+                    <h3 class="pt-[16px] md:pt-[0px] font-bold text-xl  text-gray-700">Our guest lecture</h3>
                     <p class="text-sm text-gray-500">Join keynote with Oliver Sack about music in medical treatment</p>
                     <a class="text-sm text-blue-400" href="">Read more</a>
                 </figcaption>  
                 </figure>
             </article>
         </section>
+
         <section class="justify-items-center bg-gray-100">
             <h2 class="pt-[32px] pb-[32px] text-4xl font-bold  text-gray-700">Start learning</h2>
-            <article class="grid grid-cols-3 pl-[72px] pr-[72px] pb-[32px] gap-[32px]">
-                <figure class=" cursor-pointer">
-                    <img class="h-auto" src="images/course-software.jpg" alt="software">
-                    <figcaption class="h-auto pl-[16px] pb-[20px] bg-white  hover:bg-gray-200">
-                        <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Software engineering</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">Web Development, Mobile Development, iOT, APIs</p>
+            <article class="md:grid grid-cols-3 pl-[72px] pr-[72px] pb-[32px] gap-[32px]">
+                <figure class="pb-[8px] w-[400px] cursor-pointer">
+                    <img class="hidden md:block h-auto" src="images/course-software.jpg" alt="software">
+                    <figcaption class="h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
+                        <h3 class="text-xl font-bold pt-[16px] text-gray-700">Software engineering</h3>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">Web Development, Mobile Development, iOT, APIs</p>
                     </figcaption>
                 </figure>
-                <figure class="cursor-pointer">
-                    <img class="h-auto" src="images/course-computer-art.jpg" alt="computer-art">
-                    <figcaption class="flex flex-col h-auto pl-[16px] bg-white  hover:bg-gray-200">
+                <figure class="pb-[8px] w-[400px] cursor-pointer">
+                    <img class="hidden md:block h-auto" src="images/course-computer-art.jpg" alt="computer-art">
+                    <figcaption class=" h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
                         <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Computer art</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
                     </figcaption>
                 </figure>
-                <figure class="cursor-pointer">
-                    <img class="h-auto" src="images/course-design.jpg" alt="design">
-                    <figcaption class="flex flex-col pb-[20px] h-auto pl-[16px] bg-white  hover:bg-gray-200">
+                <figure class="pb-[8px] w-[400px] cursor-pointer">
+                    <img class="hidden md:block h-auto" src="images/course-design.jpg" alt="design">
+                    <figcaption class="h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
                         <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Design</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">User Experience Design, User Research, Visual Design</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">User Experience Design, User Research, Visual Design</p>
                     </figcaption>
                 </figure>
-                <figure class="cursor-pointer">
-                    <img class="h-auto" src="images/course-data.jpg" alt="data">
-                    <figcaption class="h-auto pl-[16px] bg-white hover:bg-gray-200">
+                <figure class="pb-[8px] w-[400px] cursor-pointer">
+                    <img class="hidden md:block h-auto" src="images/course-data.jpg" alt="data">
+                    <figcaption class="h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
                         <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Data</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">Data Science, Big Data, SQL, Data Visualization</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">Data Science, Big Data, SQL, Data Visualization</p>
                     </figcaption>
                 </figure>
-                <figure class="cursor-pointer" >
-                    <img class="h-auto" src="images/course-business.jpg" alt="business">
-                    <figcaption class="h-auto pl-[16px] bg-white  hover:bg-gray-200">
+                <figure class="pb-[8px] w-[400px] cursor-pointer" >
+                    <img class="hidden md:block h-auto" src="images/course-business.jpg" alt="business">
+                    <figcaption class="h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
                         <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Business</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">Product Development, Business Development, Startup</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">Product Development, Business Development, Startup</p>
                     </figcaption>
                 </figure>
-                <figure class="cursor-pointer">
-                    <img class="h-auto" src="images/course-marketing.jpg" alt="marketing">
-                    <figcaption class="h-auto pl-[16px] bg-white  hover:bg-gray-200">
+                <figure class="pb-[8px] w-[400px] cursor-pointer">
+                    <img class="hidden md:block h-auto" src="images/course-marketing.jpg" alt="marketing">
+                    <figcaption class="h-auto pl-[16px] pt-[16px] pb-[24px] bg-gray-300 md:bg-white  hover:bg-gray-200">
                         <h3 class="text-xl font-bold pt-[16px]  text-gray-700">Marketing</h3>
-                        <p class="text-sm text-gray-500 pt-[8px]">COURSES</p>
-                        <p class="text-sm text-gray-500 pt-[8px] pb-[24px]">Analytics, Content Marketing, Mobile Marketing</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px]">COURSES</p>
+                        <p class="hidden md:block text-sm text-gray-500 pt-[8px] pb-[24px]">Analytics, Content Marketing, Mobile Marketing</p>
                     </figcaption>
                 </figure>
             </article>
         </section>
         <section class="justify-items-center bg-gray-50">
-            <h2 class="pt-[32px] pb-[32px] text-4xl font-bold  text-gray-700">Thesis exhibit</h2>
-            <article class="grid grid-cols-[60%_40%]">
-                <figure class="pl-[24px]">
-                    <video class="w-full h-auto" src="/videos/thesis.mp4"></video>
-                    <h3 class="text-xl font-bold pt-[24px] pb-[8px]  text-gray-700">Reimagine urban</h3>
-                    <p class="text-sm text-gray-500 pb-[32px]">"Lorem ipsum dolor sit amet consectetur adipisicing elit. At numquam ad explicabo. Voluptates, accusamus ad quis architecto voluptatum sunt error obcaecati non. Soluta dolorem libero dolorum nihil vel tenetur tempore illo."</p>
+            <h2 class="pt-[32px] md:pb-[32px] text-4xl font-bold  text-gray-700">Thesis exhibit</h2>
+            <article class="md:grid grid-cols-[60%_40%]">
+                <figure class="pt-[16px] md:pl-[24px]">
+                    <video class="w-full pb-[24px] md:h-auto " src="/videos/thesis.mp4" type="/video/mp4"></video>
+                    <h3 class="hidden md:block text-xl font-bold pt-[24px] pb-[8px]  text-gray-700">Reimagine urban</h3>
+                    <p class="hidden md:block text-sm text-gray-500 pb-[32px]">"Lorem ipsum dolor sit amet consectetur adipisicing elit. At numquam ad explicabo. Voluptates, accusamus ad quis architecto voluptatum sunt error obcaecati non. Soluta dolorem libero dolorum nihil vel tenetur tempore illo."</p>
                 </figure>
-                <nav class="pl-[24px]">
+                <nav class="hidden md:block pl-[24px]">
                     <figure class="grid grid-cols-[35%_65%] hover:bg-gray-200 cursor-pointer">
                         <img class="p-[16px] w-full h-auto" src="images/thesis-fisma.jpg" alt="fisma">
                         <figcaption class="flex flex-col justify-center gap-[8px]">
@@ -150,9 +158,12 @@
         </section>
     </main>
     <footer>
-        <div class="grid grid-cols-2 pt-[16px] pb-[32px]">
-            <p class="text-sm text-gray-500 pl-[24px]">&copy; 2016 Colmar Academy. All rights reserved</p>
-            <p class="flex justify-end text-sm text-gray-500 pr-[24px]">Terms Privacy</p>  
+        <div class="grid grid-cols-2 pt-[16px] pb-[16px] md:pb-[32px]">
+            <p class="text-sm text-gray-500 w-[400px] pl-[24px]">&copy; 2016 Colmar Academy. All rights reserved</p>
+            <div class="hidden md:block">
+                <p class="flex justify-end text-sm text-gray-500 pr-[24px]">Terms Privacy</p>  
+            </div>
+            
         </div>
     </footer>
 
